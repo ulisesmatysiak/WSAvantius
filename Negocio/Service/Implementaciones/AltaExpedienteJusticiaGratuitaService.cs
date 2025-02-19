@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
@@ -22,8 +23,8 @@ namespace WS_Avantius.Negocio.Service.Implementaciones
 
         public async Task<Response> apiSolicitudJusticiaGratuitaPost(string body)
         {
-            var url = "https://integracionesavantius.tcsa.local";
-            var endpoint = "/api/solicitudJusticiaGratuita";
+            var url = ConfigurationManager.AppSettings["apiBaseUrl"];
+            var endpoint = $"{url}/api/solicitudJusticiaGratuita";
             var content = new StringContent(body);
 
             HttpResponseMessage httpResponse = await _httpClient.PostAsync(endpoint, content);
