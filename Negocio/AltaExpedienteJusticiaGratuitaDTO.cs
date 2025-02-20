@@ -13,16 +13,20 @@ namespace WS_Avantius.Negocio
 {
     public class AltaExpedienteJusticiaGratuitaDTO
     {
-        public static async Task srvAltaExpedienteJusticiaGratuita(DateTime fecha, int idExpediente)
+        public static Response srvAltaExpedienteJusticiaGratuita(DateTime fecha, int idExpediente)
         {
             AltaExpedienteJusticiaGratuita data = obtenerAltaExpedienteJusticiaGratuita(fecha, idExpediente);
             var body = mapearAltaExpedienteJusticaGratuita(data);
 
+            Response response = new Response();
+
             using (var httpClient = new HttpClient())
             {
                 AltaExpedienteJusticiaGratuitaService srv = new AltaExpedienteJusticiaGratuitaService(httpClient);
-                Response response = await srv.apiSolicitudJusticiaGratuitaPost(body);
+                response = srv.apiSolicitudJusticiaGratuitaPost(body);
             }
+
+            return response;
         }
 
         #region Armo los json mapeo

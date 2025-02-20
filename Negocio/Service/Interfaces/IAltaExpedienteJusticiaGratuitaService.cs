@@ -9,6 +9,6 @@ namespace WS_Avantius.Negocio.Service.Interfaces
 {
     public interface IAltaExpedienteJusticiaGratuitaService
     {
-        Task<Response> apiSolicitudJusticiaGratuitaPost(string body);
+        Response apiSolicitudJusticiaGratuitaPost(string body);
     }
 }
