@@ -53,13 +53,6 @@ namespace WS_Avantius.Negocio.Service.Implementaciones
             try
             {
                 HttpResponseMessage httpResponse = _httpClient.PostAsync(endpoint, content).GetAwaiter().GetResult();
-                if (httpResponse.StatusCode == HttpStatusCode.Forbidden)
-                {
-                    string errorContent = httpResponse.Content.ReadAsStringAsync().GetAwaiter().GetResult();
-                    Console.WriteLine("Contenido del error 403: ");
-                    Console.WriteLine(errorContent);
-                }
-
                 httpResponse.EnsureSuccessStatusCode();
 
                 string json = httpResponse.Content.ReadAsStringAsync().GetAwaiter().GetResult();
