@@ -64,14 +64,13 @@ namespace WS_Avantius.Datos
                 {
                     try
                     {
-
                         solicitud.Solicitante = new Solicitante
                         {
                             Profesion = conn.Lector["Profesion"]?.ToString(),
                             CodigoEstadoCivil = conn.Lector["CodigoEstadoCivil"]?.ToString(),
                             CodigoRegimenEconomicoMatrimonial = conn.Lector["CodigoRegimenEconomicoMatrimonial"]?.ToString(),
                             CodigoIntegracionFamilia = conn.Lector["CodigoIntegracionFamilia"]?.ToString(),
-                            PersonaSolicitante = new PersonaSolicitante
+                            PersonaSolicitante = new Persona
                             {
                                 CodigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
                                 CodigoPais = conn.Lector["CodigoPais"]?.ToString(),
@@ -80,6 +79,12 @@ namespace WS_Avantius.Datos
                                     TipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
                                     Identificacion = conn.Lector["Identificacion"]?.ToString(),
                                     CodigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
+                                },
+                                PersonaJuridica = new PersonaJuridica
+                                {
+                                    CargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
+                                    NombreComercial = conn.Lector["NombreComercial"]?.ToString(),
+                                    RazonSocial = conn.Lector["RazonSocial"]?.ToString()
                                 },
                                 PersonaFisica = new PersonaFisica
                                 {
@@ -102,6 +107,35 @@ namespace WS_Avantius.Datos
                                 CodigoTipoVia = conn.Lector["CodigoTipoVia"]?.ToString(),
                                 NombreVia = conn.Lector["NombreVia"]?.ToString(),
                                 CodigoPostal = conn.Lector["CodigoPostal"]?.ToString()
+                            },
+                            RepresentanteSolicitante = new RepresentanteSolicitante()
+                            {
+                                CodigoCargoRepresentante = conn.Lector["CodigoCargoRepresentante"]?.ToString(),
+                                Persona = new Persona()
+                                {
+                                    CodigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
+                                    CodigoPais = conn.Lector["CodigoPais"]?.ToString(),
+                                    IdentificacionPersona = new IdentificacionPersona
+                                    {
+                                        TipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
+                                        Identificacion = conn.Lector["Identificacion"]?.ToString(),
+                                        CodigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
+                                    },
+                                    PersonaJuridica = new PersonaJuridica
+                                    {
+                                        CargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
+                                        NombreComercial = conn.Lector["NombreComercial"]?.ToString(),
+                                        RazonSocial = conn.Lector["RazonSocial"]?.ToString()
+                                    },
+                                    PersonaFisica = new PersonaFisica
+                                    {
+                                        Nombre = conn.Lector["Nombre"]?.ToString(),
+                                        Apellido1 = conn.Lector["Apellido1"]?.ToString(),
+                                        Apellido2 = conn.Lector["Apellido2"]?.ToString(),
+                                        FechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
+                                        CodigoSexo = conn.Lector["CodigoSexo"]?.ToString()
+                                    }
+                                }
                             }
                         };
                     }
@@ -166,6 +200,20 @@ namespace WS_Avantius.Datos
                                     TipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
                                     Identificacion = conn.Lector["Identificacion"]?.ToString(),
                                     CodigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
+                                },
+                                PersonaJuridica = new PersonaJuridica
+                                {
+                                    CargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
+                                    NombreComercial = conn.Lector["NombreComercial"]?.ToString(),
+                                    RazonSocial = conn.Lector["RazonSocial"]?.ToString()
+                                },
+                                PersonaFisica = new PersonaFisica
+                                {
+                                    Nombre = conn.Lector["Nombre"]?.ToString(),
+                                    Apellido1 = conn.Lector["Apellido1"]?.ToString(),
+                                    Apellido2 = conn.Lector["Apellido2"]?.ToString(),
+                                    FechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
+                                    CodigoSexo = conn.Lector["CodigoSexo"]?.ToString()
                                 }
                             },
                             Domicilio = new Domicilio
@@ -317,6 +365,12 @@ namespace WS_Avantius.Datos
                         {
                             OtrosMotivos = conn.Lector["OtrosMotivos"]?.ToString(),
                             SolicitudesExcepcionalDelDerecho = new List<SolicitudExcepcionalDelDerecho>()
+                            {
+                             new SolicitudExcepcionalDelDerecho
+                             {
+                                 CodigoCircunstanciaExcepcional = conn.Lector["CodigoCircunstanciaExcepcional"]?.ToString()
+                             }
+                            }
                         };
                     }
                     catch (Exception ex)

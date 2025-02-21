@@ -9,7 +9,7 @@ namespace WS_Avantius.Entidades
     public class Solicitante
     {
         public string Profesion { get; set; }
-        [Required] public PersonaSolicitante PersonaSolicitante { get; set; }
+        [Required] public Persona PersonaSolicitante { get; set; }
         [Required] public Domicilio Domicilio { get; set; }
         [MinLength(5), MaxLength(5)] public string CodigoEstadoCivil { get; set; }
         [MinLength(5), MaxLength(5)] public string CodigoRegimenEconomicoMatrimonial { get; set; }
