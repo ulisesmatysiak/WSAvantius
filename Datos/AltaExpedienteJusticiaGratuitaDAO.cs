@@ -159,11 +159,23 @@ namespace WS_Avantius.Datos
                             {
                                 totalOtrasPrestaciones = Convert.ToDecimal(conn.Lector["TotalOtrasPrestaciones"]),
                                 codigoOtraPrestacion = new List<OtraPrestacion>()
+                                {
+                                    new OtraPrestacion
+                                    {
+                                        codigoOtraPrestacion = conn.Lector["codigoOtraPrestacion"]?.ToString()
+                                    }
+                                }
                             },
                             otrosIngresosBienes = new OtrosIngresosBienes
                             {
                                 totalOtrosIngresosBienes = Convert.ToDecimal(conn.Lector["TotalOtrosIngresosBienes"]),
                                 codigoIngresoBien = new List<OtroIngresoBien>()
+                                {
+                                    new OtroIngresoBien
+                                    {
+                                        codigoOtroIngresoBien = conn.Lector["CodigoOtroIngresoBien"]?.ToString()
+                                    }
+                                }
                             }
                         };
 
