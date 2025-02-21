@@ -169,7 +169,7 @@ namespace WS_Avantius.Datos
                             otrosIngresosBienes = new OtrosIngresosBienes
                             {
                                 totalOtrosIngresosBienes = Convert.ToDouble(conn.Lector["TotalOtrosIngresosBienes"]),
-                                otrosIngresosBienes = new List<OtroIngresoBien>()
+                                otroIngresosBienes = new List<OtroIngresoBien>()
                                 {
                                     new OtroIngresoBien
                                     {

@@ -7,7 +7,7 @@ namespace WS_Avantius.Entidades
 {
     public class OtrosIngresosBienes
     {
-        public List<OtroIngresoBien> otrosIngresosBienes { get; set; }
+        public List<OtroIngresoBien> otroIngresosBienes { get; set; }
         public double totalOtrosIngresosBienes { get; set; }
     }
 }
