@@ -10,6 +10,6 @@ namespace WS_Avantius.Entidades
     {
         public OtrasPrestaciones otrasPrestaciones { get; set; }
         public OtrosIngresosBienes otrosIngresosBienes { get; set; }
-        [Required] public decimal ingresosAnualesBrutos { get; set; }
+        [Required] public double ingresosAnualesBrutos { get; set; }
     }
 }

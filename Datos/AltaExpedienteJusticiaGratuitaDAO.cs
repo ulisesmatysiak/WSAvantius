@@ -154,10 +154,10 @@ namespace WS_Avantius.Datos
                     {
                         var datosEconomicos = new DatosEconomicos
                         {
-                            ingresosAnualesBrutos = Convert.ToDecimal(conn.Lector["IngresosAnualesBrutos"]),
+                            ingresosAnualesBrutos = Convert.ToDouble(conn.Lector["IngresosAnualesBrutos"]),
                             otrasPrestaciones = new OtrasPrestaciones
                             {
-                                totalOtrasPrestaciones = Convert.ToDecimal(conn.Lector["TotalOtrasPrestaciones"]),
+                                totalOtrasPrestaciones = Convert.ToDouble(conn.Lector["TotalOtrasPrestaciones"]),
                                 codigoOtraPrestacion = new List<OtraPrestacion>()
                                 {
                                     new OtraPrestacion
@@ -168,7 +168,7 @@ namespace WS_Avantius.Datos
                             },
                             otrosIngresosBienes = new OtrosIngresosBienes
                             {
-                                totalOtrosIngresosBienes = Convert.ToDecimal(conn.Lector["TotalOtrosIngresosBienes"]),
+                                totalOtrosIngresosBienes = Convert.ToDouble(conn.Lector["TotalOtrosIngresosBienes"]),
                                 codigoIngresoBien = new List<OtroIngresoBien>()
                                 {
                                     new OtroIngresoBien
