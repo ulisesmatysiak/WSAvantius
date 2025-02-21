@@ -8,8 +8,8 @@ namespace WS_Avantius.Entidades
 {
     public class PersonaJuridica
     {
-        public string CargoResponsable { get; set; }
-        [Required][MinLength(1)] public string NombreComercial { get; set; }
-        [Required][MinLength(1)] public string RazonSocial { get; set; }
+        public string cargoResponsable { get; set; }
+        [Required][MinLength(1)] public string nombreComercial { get; set; }
+        [Required][MinLength(1)] public string razonSocial { get; set; }
     }
 }

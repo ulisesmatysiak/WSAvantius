@@ -7,7 +7,7 @@ namespace WS_Avantius.Entidades
 {
     public class CircunstanciasExcepcionales
     {
-        public List<SolicitudExcepcionalDelDerecho> SolicitudesExcepcionalDelDerecho { get; set; }
-        public string OtrosMotivos { get; set; }
+        public List<SolicitudExcepcionalDelDerecho> solicitudesExcepcionalDelDerecho { get; set; }
+        public string otrosMotivos { get; set; }
     }
 }

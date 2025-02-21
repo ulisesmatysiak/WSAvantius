@@ -8,7 +8,6 @@ namespace WS_Avantius.Entidades
 {
     public class OtroIngresoBien
     {
-        [MinLength(5), MaxLength(5)]
-        public string CodigoOtroIngresoBien { get; set; }
+        [MinLength(5), MaxLength(5)] public string codigoOtroIngresoBien { get; set; }
     }
 }

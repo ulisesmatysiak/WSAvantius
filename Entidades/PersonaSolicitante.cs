@@ -8,10 +8,10 @@ namespace WS_Avantius.Entidades
 {
     public class PersonaSolicitante
     {
-        [MinLength(3), MaxLength(3)] public string CodigoNacionalidad { get; set; }
-        [Required] public IdentificacionPersona IdentificacionPersona { get; set; }
-        [Required][MinLength(1)] public string CodigoPais { get; set; }
-        public PersonaJuridica PersonaJuridica { get; set; }
-        public PersonaFisica PersonaFisica { get; set; }
+        [MinLength(3), MaxLength(3)] public string codigoNacionalidad { get; set; }
+        [Required] public IdentificacionPersona identificacionPersona { get; set; }
+        [Required][MinLength(1)] public string codigoPais { get; set; }
+        public PersonaJuridica personaJuridica { get; set; }
+        public PersonaFisica personaFisica { get; set; }
     }
 }

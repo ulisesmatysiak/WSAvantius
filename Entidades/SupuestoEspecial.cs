@@ -8,6 +8,6 @@ namespace WS_Avantius.Entidades
 {
     public class SupuestoEspecial
     {
-        [Required][MinLength(5), MaxLength(5)] public string CodigoSupuestoEspecial { get; set; }
+        [Required][MinLength(5), MaxLength(5)] public string codigoSupuestoEspecial { get; set; }
     }
 }

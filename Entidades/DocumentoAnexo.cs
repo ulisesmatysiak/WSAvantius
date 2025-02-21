@@ -8,10 +8,10 @@ namespace WS_Avantius.Entidades
 {
     public class DocumentoAnexo
     {
-        [Required][MinLength(1)] public string LocalizadorArchivo { get; set; }
-        [Required][MinLength(1)] public string Titulo { get; set; }
-        [Required] public bool Principal { get; set; }
-        [Required][MinLength(1)] public string CodigoCategoriaDocumento { get; set; }
-        public string Descripcion { get; set; }
+        [Required][MinLength(1)] public string localizadorArchivo { get; set; }
+        [Required][MinLength(1)] public string titulo { get; set; }
+        [Required] public bool principal { get; set; }
+        [Required][MinLength(1)] public string codigoCategoriaDocumento { get; set; }
+        public string descripcion { get; set; }
     }
 }

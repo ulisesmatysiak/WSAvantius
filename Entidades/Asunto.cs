@@ -7,13 +7,13 @@ namespace WS_Avantius.Entidades
 {
     public class Asunto
     {
-        public bool PrecisaAbogado { get; set; }
-        public bool PrecisaProcurador { get; set; }
-        public string CodigoOrganoJudicial { get; set; }
-        public string CodigoTipoOrganoJudicial { get; set; }
-        public string Numero { get; set; }
-        public string Anio { get; set; }
-        public Abogado Abogado { get; set; }
-        public Procurador Procurador { get; set; }
+        public bool precisaAbogado { get; set; }
+        public bool precisaProcurador { get; set; }
+        public string codigoOrganoJudicial { get; set; }
+        public string codigoTipoOrganoJudicial { get; set; }
+        public string numero { get; set; }
+        public string anio { get; set; }
+        public Abogado abogado { get; set; }
+        public Procurador procurador { get; set; }
     }
 }

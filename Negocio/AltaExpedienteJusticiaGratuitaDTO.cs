@@ -41,8 +41,8 @@ namespace WS_Avantius.Negocio
         {
             AltaExpedienteJusticiaGratuita altaExpedienteJusticiaGratuita = new AltaExpedienteJusticiaGratuita
             {
-                EntidadPresenta = "A01059",
-                Solicitud = obtenerSolicitud(fecha, idExpediente)
+                //entidadPresenta = "A01059",
+                solicitud = obtenerSolicitud(fecha, idExpediente)
             };
             return altaExpedienteJusticiaGratuita;
         }

@@ -8,9 +8,9 @@ namespace WS_Avantius.Entidades
 {
     public class PersonaRelacionada
     {
-        [Required] public Persona Persona { get; set; }
-        [MinLength(5),MaxLength(5)] public string CodigoTipoRelacion { get; set; }
-        [Required] public bool EsContrario { get; set; }
-        public Domicilio Domicilio { get; set; }
+        [Required] public Persona persona { get; set; }
+        [MinLength(5),MaxLength(5)] public string codigoTipoRelacion { get; set; }
+        [Required] public bool esContrario { get; set; }
+        public Domicilio domicilio { get; set; }
     }
 }

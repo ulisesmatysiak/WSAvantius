@@ -8,7 +8,6 @@ namespace WS_Avantius.Entidades
 {
     public class OtraPrestacion
     {
-        [MinLength(5),MaxLength(5)]
-        public string CodigoOtraPrestacion { get; set; }
+        [MinLength(5),MaxLength(5)] public string codigoOtraPrestacion { get; set; }
     }
 }

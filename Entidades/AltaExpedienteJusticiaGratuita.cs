@@ -9,7 +9,7 @@ namespace WS_Avantius.Entidades
 {
     public class AltaExpedienteJusticiaGratuita
     {
-        [Required] public Solicitud Solicitud { get; set; }
-        [Required][MinLength(1)] public string EntidadPresenta { get; set; }
+        [Required] public Solicitud solicitud { get; set; }
+        //[Required][MinLength(1)] public string entidadPresenta { get; set; }
     }
 }

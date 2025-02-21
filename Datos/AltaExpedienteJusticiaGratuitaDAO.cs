@@ -24,11 +24,11 @@ namespace WS_Avantius.Datos
                 {
                     try
                     {
-                        solicitud.CodigoTipoSolicitud = conn.Lector["CodigoTipoSolicitud"]?.ToString();
-                        solicitud.LugarPresentacion = conn.Lector["LugarPresentacion"]?.ToString();
-                        solicitud.FechaPresentacion = conn.Lector["FechaPresentacion"]?.ToString();
-                        solicitud.ObservacionesRegistro = conn.Lector["ObservacionesRegistro"]?.ToString();
-                        solicitud.CodigoIdiomaAsistenciaLetrada = conn.Lector["CodigoIdiomaAsistenciaLetrada"]?.ToString();
+                        solicitud.codigoTipoSolicitud = conn.Lector["CodigoTipoSolicitud"]?.ToString();
+                        solicitud.lugarPresentacion = conn.Lector["LugarPresentacion"]?.ToString();
+                        solicitud.fechaPresentacion = conn.Lector["FechaPresentacion"]?.ToString();
+                        solicitud.observacionesRegistro = conn.Lector["ObservacionesRegistro"]?.ToString();
+                        solicitud.codigoIdiomaAsistenciaLetrada = conn.Lector["CodigoIdiomaAsistenciaLetrada"]?.ToString();
                     }
                     catch (Exception ex)
                     {
@@ -43,12 +43,12 @@ namespace WS_Avantius.Datos
                 {
                     try
                     {
-                        solicitud.Calificacion = new Calificacion
+                        solicitud.calificacion = new Calificacion
                         {
-                            Observaciones = conn.Lector["Observaciones"]?.ToString(),
-                            CodigoTipoResolucionEconomica = conn.Lector["CodigoTipoResolucionEconomica"]?.ToString(),
-                            CodigoTipoCalificacion = conn.Lector["CodigoTipoCalificacion"]?.ToString(),
-                            FechaCalificacion = conn.Lector["FechaCalificacion"]?.ToString()
+                            observaciones = conn.Lector["Observaciones"]?.ToString(),
+                            codigoTipoResolucionEconomica = conn.Lector["CodigoTipoResolucionEconomica"]?.ToString(),
+                            codigoTipoCalificacion = conn.Lector["CodigoTipoCalificacion"]?.ToString(),
+                            fechaCalificacion = conn.Lector["FechaCalificacion"]?.ToString()
                         };
                     }
                     catch (Exception ex)
@@ -64,76 +64,76 @@ namespace WS_Avantius.Datos
                 {
                     try
                     {
-                        solicitud.Solicitante = new Solicitante
+                        solicitud.solicitante = new Solicitante
                         {
-                            Profesion = conn.Lector["Profesion"]?.ToString(),
-                            CodigoEstadoCivil = conn.Lector["CodigoEstadoCivil"]?.ToString(),
-                            CodigoRegimenEconomicoMatrimonial = conn.Lector["CodigoRegimenEconomicoMatrimonial"]?.ToString(),
-                            CodigoIntegracionFamilia = conn.Lector["CodigoIntegracionFamilia"]?.ToString(),
-                            PersonaSolicitante = new Persona
+                            profesion = conn.Lector["Profesion"]?.ToString(),
+                            codigoEstadoCivil = conn.Lector["CodigoEstadoCivil"]?.ToString(),
+                            codigoRegimenEconomicoMatrimonial = conn.Lector["CodigoRegimenEconomicoMatrimonial"]?.ToString(),
+                            codigoIntegracionFamilia = conn.Lector["CodigoIntegracionFamilia"]?.ToString(),
+                            personaSolicitante = new Persona
                             {
-                                CodigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
-                                CodigoPais = conn.Lector["CodigoPais"]?.ToString(),
-                                IdentificacionPersona = new IdentificacionPersona
+                                codigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
+                                codigoPais = conn.Lector["CodigoPais"]?.ToString(),
+                                identificacionPersona = new IdentificacionPersona
                                 {
-                                    TipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
-                                    Identificacion = conn.Lector["Identificacion"]?.ToString(),
-                                    CodigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
+                                    tipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
+                                    identificacion = conn.Lector["Identificacion"]?.ToString(),
+                                    codigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
                                 },
-                                PersonaJuridica = new PersonaJuridica
+                                personaJuridica = new PersonaJuridica
                                 {
-                                    CargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
-                                    NombreComercial = conn.Lector["NombreComercial"]?.ToString(),
-                                    RazonSocial = conn.Lector["RazonSocial"]?.ToString()
+                                    cargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
+                                    nombreComercial = conn.Lector["NombreComercial"]?.ToString(),
+                                    razonSocial = conn.Lector["RazonSocial"]?.ToString()
                                 },
-                                PersonaFisica = new PersonaFisica
+                                personaFisica = new PersonaFisica
                                 {
-                                    Nombre = conn.Lector["Nombre"]?.ToString(),
-                                    Apellido1 = conn.Lector["Apellido1"]?.ToString(),
-                                    Apellido2 = conn.Lector["Apellido2"]?.ToString(),
-                                    FechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
-                                    CodigoSexo = conn.Lector["CodigoSexo"]?.ToString()
+                                    nombre = conn.Lector["Nombre"]?.ToString(),
+                                    apellido1 = conn.Lector["Apellido1"]?.ToString(),
+                                    apellido2 = conn.Lector["Apellido2"]?.ToString(),
+                                    fechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
+                                    codigoSexo = conn.Lector["CodigoSexo"]?.ToString()
                                 }
                             },
-                            Domicilio = new Domicilio
+                            domicilio = new Domicilio
                             {
-                                Numero = conn.Lector["Numero"]?.ToString(),
-                                Piso = conn.Lector["Piso"]?.ToString(),
-                                Telefono = conn.Lector["Telefono"]?.ToString(),
-                                Fax = conn.Lector["Fax"]?.ToString(),
-                                CodigoPais = conn.Lector["CodigoPaisDomicilio"]?.ToString(),
-                                CodigoProvincia = conn.Lector["CodigoProvincia"]?.ToString(),
-                                CodigoMunicipio = conn.Lector["CodigoMunicipio"]?.ToString(),
-                                CodigoTipoVia = conn.Lector["CodigoTipoVia"]?.ToString(),
-                                NombreVia = conn.Lector["NombreVia"]?.ToString(),
-                                CodigoPostal = conn.Lector["CodigoPostal"]?.ToString()
+                                numero = conn.Lector["Numero"]?.ToString(),
+                                piso = conn.Lector["Piso"]?.ToString(),
+                                telefono = conn.Lector["Telefono"]?.ToString(),
+                                fax = conn.Lector["Fax"]?.ToString(),
+                                codigoPais = conn.Lector["CodigoPaisDomicilio"]?.ToString(),
+                                codigoProvincia = conn.Lector["CodigoProvincia"]?.ToString(),
+                                codigoMunicipio = conn.Lector["CodigoMunicipio"]?.ToString(),
+                                codigoTipoVia = conn.Lector["CodigoTipoVia"]?.ToString(),
+                                nombreVia = conn.Lector["NombreVia"]?.ToString(),
+                                codigoPostal = conn.Lector["CodigoPostal"]?.ToString()
                             },
-                            RepresentanteSolicitante = new RepresentanteSolicitante()
+                            representanteSolicitante = new RepresentanteSolicitante()
                             {
-                                CodigoCargoRepresentante = conn.Lector["CodigoCargoRepresentante"]?.ToString(),
-                                Persona = new Persona()
+                                codigoCargoRepresentante = conn.Lector["CodigoCargoRepresentante"]?.ToString(),
+                                persona = new Persona()
                                 {
-                                    CodigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
-                                    CodigoPais = conn.Lector["CodigoPais"]?.ToString(),
-                                    IdentificacionPersona = new IdentificacionPersona
+                                    codigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
+                                    codigoPais = conn.Lector["CodigoPais"]?.ToString(),
+                                    identificacionPersona = new IdentificacionPersona
                                     {
-                                        TipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
-                                        Identificacion = conn.Lector["Identificacion"]?.ToString(),
-                                        CodigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
+                                        tipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
+                                        identificacion = conn.Lector["Identificacion"]?.ToString(),
+                                        codigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
                                     },
-                                    PersonaJuridica = new PersonaJuridica
+                                    personaJuridica = new PersonaJuridica
                                     {
-                                        CargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
-                                        NombreComercial = conn.Lector["NombreComercial"]?.ToString(),
-                                        RazonSocial = conn.Lector["RazonSocial"]?.ToString()
+                                        cargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
+                                        nombreComercial = conn.Lector["NombreComercial"]?.ToString(),
+                                        razonSocial = conn.Lector["RazonSocial"]?.ToString()
                                     },
-                                    PersonaFisica = new PersonaFisica
+                                    personaFisica = new PersonaFisica
                                     {
-                                        Nombre = conn.Lector["Nombre"]?.ToString(),
-                                        Apellido1 = conn.Lector["Apellido1"]?.ToString(),
-                                        Apellido2 = conn.Lector["Apellido2"]?.ToString(),
-                                        FechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
-                                        CodigoSexo = conn.Lector["CodigoSexo"]?.ToString()
+                                        nombre = conn.Lector["Nombre"]?.ToString(),
+                                        apellido1 = conn.Lector["Apellido1"]?.ToString(),
+                                        apellido2 = conn.Lector["Apellido2"]?.ToString(),
+                                        fechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
+                                        codigoSexo = conn.Lector["CodigoSexo"]?.ToString()
                                     }
                                 }
                             }
@@ -154,24 +154,24 @@ namespace WS_Avantius.Datos
                     {
                         var datosEconomicos = new DatosEconomicos
                         {
-                            IngresosAnualesBrutos = Convert.ToDecimal(conn.Lector["IngresosAnualesBrutos"]),
-                            OtrasPrestaciones = new OtrasPrestaciones
+                            ingresosAnualesBrutos = Convert.ToDecimal(conn.Lector["IngresosAnualesBrutos"]),
+                            otrasPrestaciones = new OtrasPrestaciones
                             {
-                                TotalOtrasPrestaciones = Convert.ToDecimal(conn.Lector["TotalOtrasPrestaciones"]),
-                                CodigoOtraPrestacion = new List<OtraPrestacion>()
+                                totalOtrasPrestaciones = Convert.ToDecimal(conn.Lector["TotalOtrasPrestaciones"]),
+                                codigoOtraPrestacion = new List<OtraPrestacion>()
                             },
-                            OtrosIngresosBienes = new OtrosIngresosBienes
+                            otrosIngresosBienes = new OtrosIngresosBienes
                             {
-                                TotalOtrosIngresosBienes = Convert.ToDecimal(conn.Lector["TotalOtrosIngresosBienes"]),
-                                CodigoIngresoBien = new List<OtroIngresoBien>()
+                                totalOtrosIngresosBienes = Convert.ToDecimal(conn.Lector["TotalOtrosIngresosBienes"]),
+                                codigoIngresoBien = new List<OtroIngresoBien>()
                             }
                         };
 
                         string tipoPersona = conn.Lector["TipoPersona"]?.ToString();
                         if (tipoPersona == "SOLICITANTE")
-                            solicitud.DatosEconomicosSolicitante = datosEconomicos;
+                            solicitud.datosEconomicosSolicitante = datosEconomicos;
                         else if (tipoPersona == "CONYUGE")
-                            solicitud.DatosEconomicosConyuge = datosEconomicos;
+                            solicitud.datosEconomicosConyuge = datosEconomicos;
                     }
                     catch (Exception ex)
                     {
@@ -181,53 +181,53 @@ namespace WS_Avantius.Datos
                 #endregion
 
                 #region Personas Relacionadas
-                solicitud.PersonasRelacionadasSolicitante = new List<PersonaRelacionada>();
+                solicitud.personasRelacionadasSolicitante = new List<PersonaRelacionada>();
                 conn.siguienteResultado();
                 while (conn.Lector.Read())
                 {
                     try
                     {
-                        solicitud.PersonasRelacionadasSolicitante.Add(new PersonaRelacionada
+                        solicitud.personasRelacionadasSolicitante.Add(new PersonaRelacionada
                         {
-                            CodigoTipoRelacion = conn.Lector["CodigoTipoRelacion"]?.ToString(),
-                            EsContrario = Convert.ToBoolean(conn.Lector["EsContrario"]),
-                            Persona = new Persona
+                            codigoTipoRelacion = conn.Lector["CodigoTipoRelacion"]?.ToString(),
+                            esContrario = Convert.ToBoolean(conn.Lector["EsContrario"]),
+                            persona = new Persona
                             {
-                                CodigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
-                                CodigoPais = conn.Lector["CodigoPais"]?.ToString(),
-                                IdentificacionPersona = new IdentificacionPersona
+                                codigoNacionalidad = conn.Lector["CodigoNacionalidad"]?.ToString(),
+                                codigoPais = conn.Lector["CodigoPais"]?.ToString(),
+                                identificacionPersona = new IdentificacionPersona
                                 {
-                                    TipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
-                                    Identificacion = conn.Lector["Identificacion"]?.ToString(),
-                                    CodigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
+                                    tipoIdentificacion = conn.Lector["TipoIdentificacion"]?.ToString(),
+                                    identificacion = conn.Lector["Identificacion"]?.ToString(),
+                                    codigoPaisExpedicion = conn.Lector["CodigoPaisExpedicion"]?.ToString()
                                 },
-                                PersonaJuridica = new PersonaJuridica
+                                personaJuridica = new PersonaJuridica
                                 {
-                                    CargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
-                                    NombreComercial = conn.Lector["NombreComercial"]?.ToString(),
-                                    RazonSocial = conn.Lector["RazonSocial"]?.ToString()
+                                    cargoResponsable = conn.Lector["CargoResponsable"]?.ToString(),
+                                    nombreComercial = conn.Lector["NombreComercial"]?.ToString(),
+                                    razonSocial = conn.Lector["RazonSocial"]?.ToString()
                                 },
-                                PersonaFisica = new PersonaFisica
+                                personaFisica = new PersonaFisica
                                 {
-                                    Nombre = conn.Lector["Nombre"]?.ToString(),
-                                    Apellido1 = conn.Lector["Apellido1"]?.ToString(),
-                                    Apellido2 = conn.Lector["Apellido2"]?.ToString(),
-                                    FechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
-                                    CodigoSexo = conn.Lector["CodigoSexo"]?.ToString()
+                                    nombre = conn.Lector["Nombre"]?.ToString(),
+                                    apellido1 = conn.Lector["Apellido1"]?.ToString(),
+                                    apellido2 = conn.Lector["Apellido2"]?.ToString(),
+                                    fechaNacimiento = conn.Lector["FechaNacimiento"]?.ToString(),
+                                    codigoSexo = conn.Lector["CodigoSexo"]?.ToString()
                                 }
                             },
-                            Domicilio = new Domicilio
+                            domicilio = new Domicilio
                             {
-                                Numero = conn.Lector["Numero"]?.ToString(),
-                                Piso = conn.Lector["Piso"]?.ToString(),
-                                Telefono = conn.Lector["Telefono"]?.ToString(),
-                                Fax = conn.Lector["Fax"]?.ToString(),
-                                CodigoPais = conn.Lector["CodigoPaisDomicilio"]?.ToString(),
-                                CodigoProvincia = conn.Lector["CodigoProvincia"]?.ToString(),
-                                CodigoMunicipio = conn.Lector["CodigoMunicipio"]?.ToString(),
-                                CodigoTipoVia = conn.Lector["CodigoTipoVia"]?.ToString(),
-                                NombreVia = conn.Lector["NombreVia"]?.ToString(),
-                                CodigoPostal = conn.Lector["CodigoPostal"]?.ToString()
+                                numero = conn.Lector["Numero"]?.ToString(),
+                                piso = conn.Lector["Piso"]?.ToString(),
+                                telefono = conn.Lector["Telefono"]?.ToString(),
+                                fax = conn.Lector["Fax"]?.ToString(),
+                                codigoPais = conn.Lector["CodigoPaisDomicilio"]?.ToString(),
+                                codigoProvincia = conn.Lector["CodigoProvincia"]?.ToString(),
+                                codigoMunicipio = conn.Lector["CodigoMunicipio"]?.ToString(),
+                                codigoTipoVia = conn.Lector["CodigoTipoVia"]?.ToString(),
+                                nombreVia = conn.Lector["NombreVia"]?.ToString(),
+                                codigoPostal = conn.Lector["CodigoPostal"]?.ToString()
                             }
                         });
                     }
@@ -239,7 +239,7 @@ namespace WS_Avantius.Datos
                 #endregion
 
                 #region Pretensiones Defender
-                solicitud.PretensionesDefender = new PretensionesDefender();
+                solicitud.pretensionesDefender = new PretensionesDefender();
                 conn.siguienteResultado();
                 while (conn.Lector.Read())
                 {
@@ -248,67 +248,67 @@ namespace WS_Avantius.Datos
 
                         var pretensionesDefender = new PretensionesDefender
                         {
-                            Observaciones = conn.Lector["Observaciones"]?.ToString(),
-                            CodigoTipoIntervinienteSolicitante = conn.Lector["CodigoTipoIntervinienteSolicitante"]?.ToString(),
-                            CodigoSituacionProceso = conn.Lector["CodigoSituacionProceso"]?.ToString(),
-                            CodigoOrdenJurisdiccional = conn.Lector["CodigoOrdenJurisdiccional"]?.ToString(),
+                            observaciones = conn.Lector["Observaciones"]?.ToString(),
+                            codigoTipoIntervinienteSolicitante = conn.Lector["CodigoTipoIntervinienteSolicitante"]?.ToString(),
+                            codigoSituacionProceso = conn.Lector["CodigoSituacionProceso"]?.ToString(),
+                            codigoOrdenJurisdiccional = conn.Lector["CodigoOrdenJurisdiccional"]?.ToString(),
 
-                            Procedimientos = new List<Procedimiento>
-                        {
-                            new Procedimiento
+                            procedimientos = new List<Procedimiento>
                             {
-                                CodigoProvincia = conn.Lector["CodigoProvincia"]?.ToString(),
-                                CodigoPoblacion = conn.Lector["CodigoPoblacion"]?.ToString(),
-                                CodigoTipoOrgano = conn.Lector["CodigoTipoOrgano"]?.ToString(),
-                                CodigoOrgano = conn.Lector["CodigoOrgano"]?.ToString(),
-                                NumeroProcedimiento = conn.Lector["NumeroProcedimiento"]?.ToString(),
-                                AnoProcedimiento = conn.Lector["AnoProcedimiento"]?.ToString(),
-                                NumeroPieza = conn.Lector["NumeroPieza"]?.ToString(),
-                                CodigoTipoProcedimiento = conn.Lector["CodigoTipoProcedimiento"]?.ToString(),
-                                PrecisaAbogado = Convert.ToBoolean(conn.Lector["PrecisaAbogado_Procedimiento"]),
-                                PrecisaProcurador = Convert.ToBoolean(conn.Lector["PrecisaProcurador_Procedimiento"]),
-                                Observaciones = conn.Lector["Observaciones_Procedimiento"]?.ToString(),
-                                CodigoSituacionProceso = conn.Lector["CodigoSituacionProceso_Procedimiento"]?.ToString(),
-                                CodigoTipoFacturacion = conn.Lector["CodigoTipoFacturacion"]?.ToString(),
-                                Abogado = new Abogado
+                                new Procedimiento
                                 {
-                                    NumeroColegio = conn.Lector["NumeroColegio_Abogado_Procedimiento"]?.ToString(),
-                                    NumeroColegiado = conn.Lector["NumeroColegiado_Abogado_Procedimiento"]?.ToString(),
-                                    CodigoTarifa = conn.Lector["CodigoTarifa_Abogado_Procedimiento"]?.ToString()
-                                },
-                                Procurador = new Procurador
-                                {
-                                    NumeroColegio = conn.Lector["NumeroColegio_Procurador_Procedimiento"]?.ToString(),
-                                    NumeroColegiado = conn.Lector["NumeroColegiado_Procurador_Procedimiento"]?.ToString(),
-                                    CodigoTarifa = conn.Lector["CodigoTarifa_Procurador_Procedimiento"]?.ToString()
+                                    codigoProvincia = conn.Lector["CodigoProvincia"]?.ToString(),
+                                    codigoPoblacion = conn.Lector["CodigoPoblacion"]?.ToString(),
+                                    codigoTipoOrgano = conn.Lector["CodigoTipoOrgano"]?.ToString(),
+                                    codigoOrgano = conn.Lector["CodigoOrgano"]?.ToString(),
+                                    numeroProcedimiento = conn.Lector["NumeroProcedimiento"]?.ToString(),
+                                    anoProcedimiento = conn.Lector["AnoProcedimiento"]?.ToString(),
+                                    numeroPieza = conn.Lector["NumeroPieza"]?.ToString(),
+                                    codigoTipoProcedimiento = conn.Lector["CodigoTipoProcedimiento"]?.ToString(),
+                                    precisaAbogado = Convert.ToBoolean(conn.Lector["PrecisaAbogado_Procedimiento"]),
+                                    precisaProcurador = Convert.ToBoolean(conn.Lector["PrecisaProcurador_Procedimiento"]),
+                                    observaciones = conn.Lector["Observaciones_Procedimiento"]?.ToString(),
+                                    codigoSituacionProceso = conn.Lector["CodigoSituacionProceso_Procedimiento"]?.ToString(),
+                                    codigoTipoFacturacion = conn.Lector["CodigoTipoFacturacion"]?.ToString(),
+                                    abogado = new Abogado
+                                        {
+                                            numeroColegiado = conn.Lector["NumeroColegio_Abogado_Procedimiento"]?.ToString(),
+                                            numeroColegio = conn.Lector["NumeroColegiado_Abogado_Procedimiento"]?.ToString(),
+                                            codigoTarifa = conn.Lector["CodigoTarifa_Abogado_Procedimiento"]?.ToString()
+                                        },
+                                    procurador = new Procurador
+                                        {
+                                            numeroColegio = conn.Lector["NumeroColegio_Procurador_Procedimiento"]?.ToString(),
+                                            numeroColegiado = conn.Lector["NumeroColegiado_Procurador_Procedimiento"]?.ToString(),
+                                            codigoTarifa = conn.Lector["CodigoTarifa_Procurador_Procedimiento"]?.ToString()
+                                        }
                                 }
-                            }
-                        },
+                            },
 
-                            Asunto = new Asunto
+                            asunto = new Asunto
                             {
-                                PrecisaAbogado = Convert.ToBoolean(conn.Lector["PrecisaAbogado_Asunto"]),
-                                PrecisaProcurador = Convert.ToBoolean(conn.Lector["PrecisaProcurador_Asunto"]),
-                                CodigoOrganoJudicial = conn.Lector["CodigoOrganoJudicial"]?.ToString(),
-                                CodigoTipoOrganoJudicial = conn.Lector["CodigoTipoOrganoJudicial"]?.ToString(),
-                                Numero = conn.Lector["Numero"]?.ToString(),
-                                Anio = conn.Lector["Anio"]?.ToString(),
-                                Abogado = new Abogado
+                                precisaAbogado = Convert.ToBoolean(conn.Lector["PrecisaAbogado_Asunto"]),
+                                precisaProcurador = Convert.ToBoolean(conn.Lector["PrecisaProcurador_Asunto"]),
+                                codigoOrganoJudicial = conn.Lector["CodigoOrganoJudicial"]?.ToString(),
+                                codigoTipoOrganoJudicial = conn.Lector["CodigoTipoOrganoJudicial"]?.ToString(),
+                                numero = conn.Lector["Numero"]?.ToString(),
+                                anio = conn.Lector["Anio"]?.ToString(),
+                                abogado = new Abogado
                                 {
-                                    NumeroColegio = conn.Lector["NumeroColegio_Abogado_Asunto"]?.ToString(),
-                                    NumeroColegiado = conn.Lector["NumeroColegiado_Abogado_Asunto"]?.ToString(),
-                                    CodigoTarifa = conn.Lector["CodigoTarifa_Abogado_Asunto"]?.ToString()
+                                    numeroColegio = conn.Lector["NumeroColegio_Abogado_Asunto"]?.ToString(),
+                                    numeroColegiado = conn.Lector["NumeroColegiado_Abogado_Asunto"]?.ToString(),
+                                    codigoTarifa = conn.Lector["CodigoTarifa_Abogado_Asunto"]?.ToString()
                                 },
-                                Procurador = new Procurador
+                                procurador = new Procurador
                                 {
-                                    NumeroColegio = conn.Lector["NumeroColegio_Procurador_Asunto"]?.ToString(),
-                                    NumeroColegiado = conn.Lector["NumeroColegiado_Procurador_Asunto"]?.ToString(),
-                                    CodigoTarifa = conn.Lector["CodigoTarifa_Procurador_Asunto"]?.ToString()
+                                    numeroColegio = conn.Lector["NumeroColegio_Procurador_Asunto"]?.ToString(),
+                                    numeroColegiado = conn.Lector["NumeroColegiado_Procurador_Asunto"]?.ToString(),
+                                    codigoTarifa = conn.Lector["CodigoTarifa_Procurador_Asunto"]?.ToString()
                                 }
                             }
                         };
 
-                        solicitud.PretensionesDefender = pretensionesDefender;
+                        solicitud.pretensionesDefender = pretensionesDefender;
                     }
                     catch (Exception ex)
                     {
@@ -318,15 +318,15 @@ namespace WS_Avantius.Datos
                 #endregion
 
                 #region PrestacionesRegistro
-                solicitud.PrestacionesRegistro = new List<PrestacionRegistro>();
+                solicitud.prestacionesRegistro = new List<PrestacionRegistro>();
                 conn.siguienteResultado();
                 while (conn.Lector.Read())
                 {
                     try
                     {
-                        solicitud.PrestacionesRegistro.Add(new PrestacionRegistro
+                        solicitud.prestacionesRegistro.Add(new PrestacionRegistro
                         {
-                            CodigoPrestacion = conn.Lector["CodigoPrestacion"]?.ToString()
+                            codigoPrestacion = conn.Lector["CodigoPrestacion"]?.ToString()
                         });
                     }
                     catch (Exception ex)
@@ -337,15 +337,15 @@ namespace WS_Avantius.Datos
                 #endregion
 
                 #region SupuestosEspeciales
-                solicitud.SupuestosEspeciales = new List<SupuestoEspecial>();
+                solicitud.supuestosEspeciales = new List<SupuestoEspecial>();
                 conn.siguienteResultado();
                 while (conn.Lector.Read())
                 {
                     try
                     {
-                        solicitud.SupuestosEspeciales.Add(new SupuestoEspecial
+                        solicitud.supuestosEspeciales.Add(new SupuestoEspecial
                         {
-                            CodigoSupuestoEspecial = conn.Lector["CodigoSupuestoEspecial"]?.ToString()
+                            codigoSupuestoEspecial = conn.Lector["CodigoSupuestoEspecial"]?.ToString()
                         });
                     }
                     catch (Exception ex)
@@ -361,14 +361,14 @@ namespace WS_Avantius.Datos
                 {
                     try
                     {
-                        solicitud.CircunstanciasExcepcionales = new CircunstanciasExcepcionales
+                        solicitud.circunstanciasExcepcionales = new CircunstanciasExcepcionales
                         {
-                            OtrosMotivos = conn.Lector["OtrosMotivos"]?.ToString(),
-                            SolicitudesExcepcionalDelDerecho = new List<SolicitudExcepcionalDelDerecho>()
+                            otrosMotivos = conn.Lector["OtrosMotivos"]?.ToString(),
+                            solicitudesExcepcionalDelDerecho = new List<SolicitudExcepcionalDelDerecho>()
                             {
                              new SolicitudExcepcionalDelDerecho
                              {
-                                 CodigoCircunstanciaExcepcional = conn.Lector["CodigoCircunstanciaExcepcional"]?.ToString()
+                                 codigoCircunstanciaExcepcional = conn.Lector["CodigoCircunstanciaExcepcional"]?.ToString()
                              }
                             }
                         };
@@ -381,19 +381,19 @@ namespace WS_Avantius.Datos
                 #endregion
 
                 #region Documentos Anexos
-                solicitud.DocumentosAnexos = new List<DocumentoAnexo>();
+                solicitud.documentosAnexos = new List<DocumentoAnexo>();
                 conn.siguienteResultado();
                 while (conn.Lector.Read())
                 {
                     try
                     {
-                        solicitud.DocumentosAnexos.Add(new DocumentoAnexo
+                        solicitud.documentosAnexos.Add(new DocumentoAnexo
                         {
-                            LocalizadorArchivo = conn.Lector["LocalizadorArchivo"]?.ToString(),
-                            Titulo = conn.Lector["Titulo"]?.ToString(),
-                            Principal = Convert.ToBoolean(conn.Lector["Principal"]),
-                            CodigoCategoriaDocumento = conn.Lector["CodigoCategoriaDocumento"]?.ToString(),
-                            Descripcion = conn.Lector["Descripcion"]?.ToString()
+                            localizadorArchivo = conn.Lector["LocalizadorArchivo"]?.ToString(),
+                            titulo = conn.Lector["Titulo"]?.ToString(),
+                            principal = Convert.ToBoolean(conn.Lector["Principal"]),
+                            codigoCategoriaDocumento = conn.Lector["CodigoCategoriaDocumento"]?.ToString(),
+                            descripcion = conn.Lector["Descripcion"]?.ToString()
                         });
                     }
                     catch (Exception ex)
@@ -403,6 +403,7 @@ namespace WS_Avantius.Datos
                 }
                 #endregion
 
+                solicitud.asuntoViolenciaMujer = true;
                 return solicitud;
             }
             catch (Exception ex)

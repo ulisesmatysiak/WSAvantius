@@ -9,8 +9,8 @@ namespace WS_Avantius.Entidades
     public class RepresentanteSolicitante
     {
         [MinLength(5), MaxLength(5)]
-        public string CodigoCargoRepresentante { get; set; }
+        public string codigoCargoRepresentante { get; set; }
 
-        public Persona Persona { get; set; }
+        public Persona persona { get; set; }
     }
 }

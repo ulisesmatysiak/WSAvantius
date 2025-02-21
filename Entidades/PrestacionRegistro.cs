@@ -8,6 +8,6 @@ namespace WS_Avantius.Entidades
 {
     public class PrestacionRegistro
     {
-        [Required][MinLength(5), MaxLength(5)] public string CodigoPrestacion { get; set; }
+        [Required][MinLength(5), MaxLength(5)] public string codigoPrestacion { get; set; }
     }
 }
