@@ -381,13 +381,13 @@ namespace WS_Avantius.Datos
                 #endregion
 
                 #region Documentos Anexos
-                solicitud.documentosAnexos = new List<DocumentoAnexo>();
+                solicitud.documentos = new List<DocumentoAnexo>();
                 conn.siguienteResultado();
                 while (conn.Lector.Read())
                 {
                     try
                     {
-                        solicitud.documentosAnexos.Add(new DocumentoAnexo
+                        solicitud.documentos.Add(new DocumentoAnexo
                         {
                             localizadorArchivo = conn.Lector["LocalizadorArchivo"]?.ToString(),
                             titulo = conn.Lector["Titulo"]?.ToString(),

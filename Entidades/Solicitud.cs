@@ -22,7 +22,7 @@ namespace WS_Avantius.Entidades
         [Required] public List<PrestacionRegistro> prestacionesRegistro { get; set; }
         public List<SupuestoEspecial> supuestosEspeciales { get; set; }
         public CircunstanciasExcepcionales circunstanciasExcepcionales { get; set; }
-        [Required] public List<DocumentoAnexo> documentosAnexos { get; set; }
+        [Required] public List<DocumentoAnexo> documentos { get; set; }
         public bool asuntoViolenciaMujer { get; set; }
     }
 }
