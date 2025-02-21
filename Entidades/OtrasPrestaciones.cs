@@ -7,7 +7,7 @@ namespace WS_Avantius.Entidades
 {
     public class OtrasPrestaciones
     {
-        public List<OtraPrestacion> codigoOtraPrestacion {  get; set; }
+        public List<OtraPrestacion> otrasPrestaciones {  get; set; }
         public double totalOtrasPrestaciones { get; set; }
     }
 }
